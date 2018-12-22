@@ -24,7 +24,7 @@ public class ConsulClient1App implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-        List<ServiceInstance> serviceInstanceList = consulDiscoveryClient.getInstances("consulservice1");
+        List<ServiceInstance> serviceInstanceList = consulDiscoveryClient.getInstances("consulservice01");
         ServiceInstance serviceInstance = serviceInstanceList.get(0);
         System.out.println("服务地址：" + serviceInstance.getUri());
         System.out.println("服务名称：" +serviceInstance.getServiceId());

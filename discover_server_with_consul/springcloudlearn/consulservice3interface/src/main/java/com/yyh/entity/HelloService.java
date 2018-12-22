@@ -1,11 +1,9 @@
-package com.yyh.service;
+package com.yyh.entity;
 
-import com.yyh.entity.Customer;
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-@FeignClient(value = "consulservice03",fallback = FallbackSayService.class)
-public interface SayService {
+
+public interface HelloService {
 
     @RequestMapping(value = "say")
     String say();
